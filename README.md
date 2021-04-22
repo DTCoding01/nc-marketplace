@@ -28,6 +28,12 @@ Northcoders have hired you and your pair as contractors to deliver a prototype f
 
 These user stories do not have to be completed in any particular order and the implementation of them is up to you. As always start by planning your app and work on each feature in turn.
 
+As the api is still in development there are some considerations to make:
+
+1. The api has several endpoints and queries it accepts. You do not have to make use of all of them for now and several have been included to allow future expansion. Focus on your user stories and use appropriate endpoints.
+2. Users do not need to authenticate at this time. This will be handled later by the NC auth service so your users just need a username to act as for now. We will add an auth layer at a later point.
+3. The items can have prices (or set them to zero if you're feeling generous). No actual money will change hands as part of this app and we will add a separate service to handle this at a later point.
+
 ### Advanced
 
 Software development is an ongoing process and there's always more you could add to any application. If you're happy with your implementation of the above stories then there are a few extra things members of the team have requested. Implement some of these features or feel free to add your own that you think will bring value to the app.
