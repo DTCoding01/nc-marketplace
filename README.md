@@ -50,5 +50,8 @@ Software development is an ongoing process and there's always more you could add
 
 We are obviously going to need some data in order to build the user interface for the marketplace. Our react application can then make API requests and display the information on the page. For this purpose, we have built several API end-points for you to retrieve data about the items, categories and users
 
-You can find the API [here](https://nc-student-tracker.herokuapp.com)
-The endpoints serve up the following:
+You can find the API and it's docs [here](hhttps://nc-marketplace.herokuapp.com/).
+
+**nb** Endpoints are accessed through the same domain e.g. [https://nc-marketplace.herokuapp.com/api/items](https://nc-marketplace.herokuapp.com/api/items)
+
+A full list of endpoints can be found in the docs above.
