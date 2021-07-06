@@ -48,7 +48,7 @@ Software development is an ongoing process and there's always more you could add
 
 ## Getting The Data
 
-We are obviously going to need some data in order to build the user interface for the marketplace. Our react application can then make API requests and display the information on the page. For this purpose, we have built several API end-points for you to retrieve data about the items, categories and users
+We are going to need some data in order to build the user interface for the marketplace. Our react application can then make API requests and display the information on the page. For this purpose we have built several API end-points for you to retrieve data about the items, categories and users.
 
 You can find the API and it's docs at [https://nc-marketplace.herokuapp.com](https://nc-marketplace.herokuapp.com/).
 
