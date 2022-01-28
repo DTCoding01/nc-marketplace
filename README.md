@@ -7,7 +7,7 @@ Northcoders are creating an online marketplace where we can find new homes for a
 Use [create-react-app](https://facebook.github.io/create-react-app/docs/getting-started) to begin your project:
 
 ```bash
-npx create-react-app . --use-npm
+npx create-react-app .
 ```
 
 ## The Desired Solution
