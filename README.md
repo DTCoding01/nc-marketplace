@@ -48,10 +48,8 @@ Software development is an ongoing process and there's always more you could add
 
 ## Getting The Data
 
-We are going to need some data in order to build the user interface for the marketplace. Our react application can then make API requests and display the information on the page. For this purpose we have built several API end-points for you to retrieve data about the items, categories and users.
+We are going to need some data in order to build the user interface for the marketplace. Our react application can then make API requests and display the information on the page. For this purpose the nc devs have built an API for you to retrieve data about the items, categories and users.
 
-You can find the API and it's docs at [https://nc-marketplace.herokuapp.com](https://nc-marketplace.herokuapp.com/).
+You can find the api in [this repo](https://github.com/northcoders/fe-nc-marketplace-api) as well as it's docs and instructions for hosting your own version of it.
 
-**nb** Endpoints are accessed through the same domain e.g. [https://nc-marketplace.herokuapp.com/api/items](https://nc-marketplace.herokuapp.com/api/items)
-
-A full list of endpoints can be found in the docs above.
+**nb** You will need to host your own version of the api on [Heroku](https://heroku.com/) before getting started on your front end so do this first and have an explore around the available data.
