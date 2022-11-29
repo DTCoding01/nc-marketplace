@@ -16,17 +16,22 @@ We are going to need some data in order to build the user interface for the mark
 
 You can find the api in [this repo](https://github.com/northcoders/fe-nc-marketplace-api) as well as it's docs and instructions for hosting your own version of it.
 
-**nb** You will need to host your own version of the api on [Heroku](https://heroku.com/) before getting started on your front end so do this first and have an explore around the available data.
+**nb** You will need to host your own version of the api before getting started on your front end so do this first and have an explore around the available data.
 
 ## The Desired Solution
 
 Northcoders have hired you and your pair as contractors to deliver a prototype for 'NC Marketplace.' At this stage we have a database of items and users setup with a rudimentary API. This api has endpoints to allow users to retrieve and add items as well manage which items users would like to buy. You need to create a user friendly interface for this API that will allow users to list and buy items from each other. Northcoder's team have provided a list of user stories for the application:
 
+### Minium Viable Product (MVP) Features
+
+Implement these first:
 - As a user, I can view a list of available items.
 - As a user, I can view a list of items for a particular category.
+- As a user, I can order an item.
+
+Once the MVP is implemented work through the rest:
 - As a user, I can list an item to sell.
 - As a user, I can delete an item listing if I change my mind.
-- As a user, I can order an item.
 - As a user, I can view which items I have previously ordered.
 - As a user, I can give another user kudos to make them feel good about themselves.
 - As a user, I can add an item to my basket to order later if I am still browsing.
