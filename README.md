@@ -14,9 +14,7 @@ npx create-react-app .
 
 We are going to need some data in order to build the user interface for the marketplace. Our react application can then make API requests and display the information on the page. For this purpose the nc devs have built an API for you to retrieve data about the items, categories and users.
 
-You can find the api in [this repo](https://github.com/northcoders/fe-nc-marketplace-api) as well as it's docs and instructions for hosting your own version of it.
-
-**nb** You will need to host your own version of the api before getting started on your front end so do this first and have an explore around the available data.
+A link to this API will be provided in your seminar channels!
 
 ## The Desired Solution
 
