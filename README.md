@@ -25,10 +25,10 @@ Northcoders have hired you and your pair as contractors to deliver a prototype f
 Implement these first:
 - As a user, I can view a list of available items.
 - As a user, I can view a list of items for a particular category.
-- As a user, I can order an item.
+- As a user, I can list an item to sell.
 
 Once the MVP is implemented work through the rest:
-- As a user, I can list an item to sell.
+- As a user, I can order an item.
 - As a user, I can delete an item listing if I change my mind.
 - As a user, I can view which items I have previously ordered.
 - As a user, I can give another user kudos to make them feel good about themselves.
