@@ -10,6 +10,8 @@ Use [create-react-app](https://facebook.github.io/create-react-app/docs/getting-
 npx create-react-app .
 ```
 
+(You can use `.` to make a react app in the current terminal location to avoid nested directories)
+
 ## Getting The Data
 
 We are going to need some data in order to build the user interface for the marketplace. Our react application can then make API requests and display the information on the page. For this purpose the nc devs have built an API for you to retrieve data about the items, categories and users.
