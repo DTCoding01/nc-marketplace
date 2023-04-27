@@ -4,10 +4,11 @@ Northcoders are creating an online marketplace where we can find new homes for a
 
 ## Getting Started
 
-Use [create-react-app](https://facebook.github.io/create-react-app/docs/getting-started) to begin your project:
+Use [Vite](https://vitejs.dev) to begin your project:
 
 ```bash
-npx create-react-app .
+$ npm create vite@latest
+$ Project name: .
 ```
 
 (You can use `.` to make a react app in the current terminal location to avoid nested directories)
