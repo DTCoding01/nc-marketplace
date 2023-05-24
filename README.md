@@ -23,7 +23,7 @@ A link to this API will be provided in your seminar channels!
 
 Northcoders have hired you and your pair as contractors to deliver a prototype for 'NC Marketplace.' At this stage we have a database of items and users setup with a rudimentary API. This api has endpoints to allow users to retrieve and add items as well manage which items users would like to buy. You need to create a user friendly interface for this API that will allow users to list and buy items from each other. Northcoder's team have provided a list of user stories for the application:
 
-### Minium Viable Product (MVP) Features
+### Minimum Viable Product (MVP) Features
 
 Implement these first:
 - As a user, I can view a list of available items.
