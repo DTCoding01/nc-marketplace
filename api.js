@@ -12,16 +12,27 @@ export function getCategories() {
 
 export function getItems(searchQuery) {
   let queryString = `/items`;
-  if (searchQuery.category !== "all") {
+  if (searchQuery.category !== "All") {
     queryString += `?category_name=${searchQuery.category}&`;
   } else {
     queryString += "?";
   }
 
   queryString += `sort_by=${searchQuery.sort_by}&order=${searchQuery.order}`;
-  console.log(queryString);
 
   return api.get(queryString).then(({ data }) => {
     return data.items;
   });
+}
+export function postItem(item){
+  const {price} = item
+  const formattedPrice = Number(price)
+  const formattedItem = {...item, price: formattedPrice}
+  return api.post('/items', formattedItem)
+  .then(({data}) => {
+    return data.item
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 }

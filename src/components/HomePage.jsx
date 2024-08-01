@@ -3,15 +3,15 @@ import ItemList from "./ItemList";
 import { useState, useEffect } from "react";
 import { getItems } from "../../api";
 import '../../css/HomePage.css'
-function HomePage() {
+function HomePage({setBasket}) {
   const [itemList, setItemList] = useState([]);
   const [searchQuery, setSearchQuery] = useState({
     order: "asc",
     sort_by: "price",
-    category: "all",
+    category: "All",
   });
+  const [searchItem, setSearchItem] = useState("")
 
-  console.log(searchQuery);
 
   useEffect(() => {
     getItems(searchQuery).then((items) => {
@@ -20,9 +20,8 @@ function HomePage() {
   }, [searchQuery]);
   return (
     <main>
-      <Search setSearchQuery={setSearchQuery} />
-
-      <ItemList itemList={itemList} />
+      <Search setSearchQuery={setSearchQuery} setSearchItem = {setSearchItem} />
+      <ItemList setBasket={setBasket} itemList={itemList} searchItem = {searchItem}/>
     </main>
   );
 }

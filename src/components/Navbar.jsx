@@ -1,14 +1,15 @@
 import "../../css/Navbar.css";
+import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({basket}) {
   return (
     <header>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>Sell</li>
+          <li><Link to={"/"}>Home</Link></li>
+          <li><Link to={"/sell"}>Sell</Link></li>
           <li>Signup</li>
-          <li>Basket</li>
+          <li>Basket: {basket.length}</li>
         </ul>
       </nav>
     </header>

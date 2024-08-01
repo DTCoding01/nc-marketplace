@@ -20,3 +20,6 @@ input {
 .query-selectors {
     display: flex;
 }
+.item-image {
+  width: 300px;
+}
