@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: rgb(237, 94, 94);
+  padding: 10px;
+  height: 5vh;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  list-style: none;
+}
