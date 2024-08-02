@@ -24,7 +24,9 @@ function Navbar({ basket }) {
           <li>
             {!user.username ? <Link to={"/sign-up"}>Sign-up/Log-in</Link> : <Link to={"/account"}>My Account</Link>  }
           </li>
-          <li>Basket: {basket.length}</li>
+          <li><Link to={"/basket"}>Basket: {basket.length}</Link>
+           
+           </li>
         </ul>
       </nav>
     </header>

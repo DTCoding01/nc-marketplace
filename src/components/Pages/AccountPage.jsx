@@ -11,10 +11,12 @@ export default function AccountPage() {
   }
   return (
     <section className="account-page">
+      <div>
       <button id="orders" onClick={handleClick}>
         My Orders
       </button>
       <button id="listings" onClick={handleClick}>My Listing</button>
+      </div>
       {shownPage === "orders" ? <OrdersPage /> : <ListingPage />}
     </section>
   );

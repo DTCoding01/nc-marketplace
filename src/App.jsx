@@ -5,6 +5,7 @@ import { useState } from "react";
 import SellItem from "./components/Pages/SellItem";
 import SignUpLogIn from "./components/Pages/SignUp-LogIn";
 import AccountPage from "./components/Pages/AccountPage";
+import Basket from "./components/Pages/Basket";
 
 function App() {
   const [basket, setBasket] = useState([]);
@@ -16,6 +17,7 @@ function App() {
         <Route path="/sell" element={<SellItem />}></Route>
         <Route path="/sign-up" element={<SignUpLogIn />}></Route>
         <Route path="/account" element={<AccountPage />}></Route>
+        <Route path="/basket" element={<Basket basket={basket} setBasket={setBasket}/>}></Route>
       </Routes>
     </>
   );

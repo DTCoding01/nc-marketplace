@@ -42,6 +42,17 @@ export function getUserIdByUsername(username) {
     return user[0].user_id;
   });
 }
+export function getListingsByUserId(id) {
+  return api.get("/items").then(({ data: { items } }) => {
+    const filteredListings = items.filter((item) => item.listed_by === id);
+    return filteredListings
+  });
+}
+export function getBasketByUsername(username) {
+  return api.get(`/users/${username}/basket`).then(({data}) => {
+    return data.items
+  })
+}
 export function postItem(item) {
   const { price } = item;
   const formattedPrice = Number(price);
@@ -66,14 +77,19 @@ export function postUser(user) {
       console.log(err);
     });
 }
-
-export function getListingsByUserId(id) {
-  return api.get("/items").then(({ data: { items } }) => {
-    const filteredListings = items.filter((item) => item.listed_by === id);
-    return filteredListings
-  });
+export function postToBasket(username, itemId){
+  return api.post(`/users/${username}/basket`, {item_id: itemId})
+  .then(({data}) => {
+    return data.item
+  })
 }
 
 export function deleteListingByItemId(id) {
   return api.delete(`/items/${id}`)
+}
+export function deleteItemFromBasket(username, itemId) {
+  return api.delete(`/users/${username}/basket/${itemId}`)
+  .catch((err) => {
+    console.log(err)
+  })
 }

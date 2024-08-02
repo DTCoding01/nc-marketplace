@@ -1,3 +1,16 @@
 .account-page{
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-page div button {
+    margin: 10px;
+    height: 100%;
+}
+
+.account-page div {
+    height: 40px;
+    margin-bottom: 20px;
 }

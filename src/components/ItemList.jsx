@@ -1,5 +1,7 @@
 import ItemCard from "./ItemCard";
-
+import { postToBasket } from "../../api";
+import { UserContext } from "../context/User";
+import { useContext } from "react";
 function ItemList({
   itemList,
   searchItem = "",
@@ -8,10 +10,14 @@ function ItemList({
   showDelete = false,
   handleRemove,
 }) {
+  const {user} = useContext(UserContext)
   function handleClick(item) {
-    setBasket((currBasket) => {
-      return [...currBasket, item];
-    });
+    postToBasket(user.username, item.item_id)
+    .then((item) => {
+      setBasket((currBasket) => {
+        return [...currBasket, item];
+      });
+    })
   }
   return (
     <ol className="item-list">
