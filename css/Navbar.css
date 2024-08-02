@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,14 +7,13 @@
 }
 
 nav {
-  background-color: #EB1C24;
+  background-color: #eb1c24;
   padding: 10px;
   height: 7vh;
   color: white;
   position: fixed;
   width: 100%;
   top: 0;
-
 }
 
 nav ul {
@@ -36,4 +35,12 @@ a {
 
 a:hover {
   color: black;
+}
+
+#avatar {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 2px solid white;
 }

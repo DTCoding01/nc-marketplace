@@ -24,15 +24,33 @@ export function getItems(searchQuery) {
     return data.items;
   });
 }
-export function postItem(item){
-  const {price} = item
-  const formattedPrice = Number(price)
-  const formattedItem = {...item, price: formattedPrice}
-  return api.post('/items', formattedItem)
-  .then(({data}) => {
-    return data.item
-  })
-  .catch((err) => {
-    console.log(err)
-  })
+export function getUserByUsername(username) {
+  return api.get(`/users/${username}`).then(({ data }) => {
+    return data.user;
+  });
+}
+
+export function postItem(item) {
+  const { price } = item;
+  const formattedPrice = Number(price);
+  const formattedItem = { ...item, price: formattedPrice };
+  return api
+    .post("/items", formattedItem)
+    .then(({ data }) => {
+      return data.item;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
+
+export function postUser(user) {
+  return api
+    .post("/users", user)
+    .then(({ data }) => {
+      return data.user;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
