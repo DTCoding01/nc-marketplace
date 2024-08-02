@@ -18,7 +18,10 @@ function App() {
           <Route path="/sell" element={<SellItem />} />
           <Route path="/sign-up" element={<SignUpLogIn />} />
           <Route path="/account" element={<AccountPage />} />
-          <Route path="/basket" element={<Basket basket={basket} setBasket={setBasket} />} />
+          <Route
+            path="/basket"
+            element={<Basket basket={basket} setBasket={setBasket} />}
+          />
         </Routes>
       </Router>
     </>

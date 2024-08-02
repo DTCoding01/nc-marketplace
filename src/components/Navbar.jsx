@@ -16,17 +16,21 @@ function Navbar({ basket }) {
           )}
           <li>{user.username}</li>
           <li>
-            <Link to={"/nc-marketplace"}>Home</Link>
+            <Link to={"/"}>Home</Link>
           </li>
           <li>
             <Link to={"/sell"}>Sell</Link>
           </li>
           <li>
-            {!user.username ? <Link to={"/sign-up"}>Sign-up/Log-in</Link> : <Link to={"/account"}>My Account</Link>  }
+            {!user.username ? (
+              <Link to={"/sign-up"}>Sign-up/Log-in</Link>
+            ) : (
+              <Link to={"/account"}>My Account</Link>
+            )}
           </li>
-          <li><Link to={"/basket"}>Basket: {basket.length}</Link>
-           
-           </li>
+          <li>
+            <Link to={"/basket"}>Basket: {basket.length}</Link>
+          </li>
         </ul>
       </nav>
     </header>
