@@ -16,7 +16,7 @@ function Navbar({ basket }) {
           )}
           <li>{user.username}</li>
           <li>
-            <Link to={"/"}>Home</Link>
+            <Link to={"/nc-marketplace"}>Home</Link>
           </li>
           <li>
             <Link to={"/sell"}>Sell</Link>
