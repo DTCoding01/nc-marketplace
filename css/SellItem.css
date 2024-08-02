@@ -1,0 +1,53 @@
+.sell-item-page {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sell-title {
+    margin-bottom: 40px;
+}
+.sell-item-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sell-item-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding: 20px;
+}
+
+.sell-item-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sell-item-input {
+  width: 70%;
+  padding: 5px;
+  margin: 5px;
+}
+
+.sell-item-button {
+  margin: 10px 0 0 0;
+  width: 70%;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  background-color: #eb1c24;
+  color: white;
+}

@@ -3,13 +3,18 @@
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 nav {
   background-color: #EB1C24;
   padding: 10px;
-  height: 5vh;
+  height: 7vh;
   color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+
 }
 
 nav ul {
@@ -22,4 +27,13 @@ nav ul {
 
 nav ul li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: black;
 }

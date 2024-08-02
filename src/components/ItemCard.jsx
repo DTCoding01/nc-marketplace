@@ -1,9 +1,18 @@
-function ItemCard({ itemName, imgUrl, price }) {
+function ItemCard({ itemName, imgUrl, price, handleClick}) {
   return (
     <section className="item-card">
-      <img className = "item-image" src={imgUrl}></img>
-      <p>{itemName}</p>
-      <p>£{(price / 100).toFixed(2)}</p>
+      <img className="item-image" src={imgUrl}></img>
+      <div className="item-card-content">
+        <div className="item-card-text">
+          <p>{itemName}</p>
+          <p>£{(price / 100).toFixed(2)}</p>
+        </div>
+        <button className="add-to-cart-button"
+          onClick={handleClick}
+        >
+          Add to cart
+        </button>
+      </div>
     </section>
   );
 }
