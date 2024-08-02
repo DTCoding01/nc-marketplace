@@ -29,7 +29,19 @@ export function getUserByUsername(username) {
     return data.user;
   });
 }
-
+export function getOrdersByUsername(username){
+  return api.get(`/users/${username}/orders`).then(({data}) => {
+    return data.items
+  })
+}
+export function getUserIdByUsername(username) {
+  return api.get(`/users`).then(({data}) => {
+    const user = data.users.filter((user) => {
+      return user.username === username
+    })
+    return user[0].user_id
+  })
+}
 export function postItem(item) {
   const { price } = item;
   const formattedPrice = Number(price);

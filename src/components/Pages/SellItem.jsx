@@ -1,7 +1,7 @@
 import { useState } from "react";
-import ItemCard from "./ItemCard";
-import { postItem } from "../../api";
-import "../../css/SellItem.css";
+import ItemCard from "../ItemCard";
+import { postItem } from "../../../api";
+import "../../../css/SellItem.css";
 function SellItem() {
   const [inputFields, setInputFields] = useState({
     item_name: "",
@@ -22,7 +22,6 @@ function SellItem() {
   function handleSubmit(e) {
     e.preventDefault();
     postItem(inputFields).then((item) => {
-      console.log(item);
       return item;
     });
   }

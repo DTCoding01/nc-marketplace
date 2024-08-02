@@ -1,6 +1,6 @@
 import ItemCard from "./ItemCard";
 
-function ItemList({ itemList, searchItem, setBasket }) {
+function ItemList({ itemList, searchItem = '', setBasket, showButton = false }) {
   function handleClick(item) {
     setBasket((currBasket) => {
       return [...currBasket, item];
@@ -17,7 +17,7 @@ function ItemList({ itemList, searchItem, setBasket }) {
         .map((item) => {
           return (
             <li key={item.item_id} className="list-item">
-              <ItemCard
+              <ItemCard showButton={showButton}
                 itemName={item.item_name}
                 imgUrl={item.img_url}
                 price={item.price}

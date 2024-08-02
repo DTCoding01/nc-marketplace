@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { UserContext } from "../context/User";
 function Navbar({ basket }) {
   const { user } = useContext(UserContext);
+  console.log(user)
   return (
     <header>
       <nav>
@@ -21,7 +22,7 @@ function Navbar({ basket }) {
             <Link to={"/sell"}>Sell</Link>
           </li>
           <li>
-            <Link to={"/sign-up"}>Sign-up/Log-in</Link>
+            {!user.username ? <Link to={"/sign-up"}>Sign-up/Log-in</Link> : <Link to={"/account"}>My Account</Link>  }
           </li>
           <li>Basket: {basket.length}</li>
         </ul>

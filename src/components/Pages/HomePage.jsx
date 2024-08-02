@@ -1,8 +1,8 @@
-import Search from "./Search";
-import ItemList from "./ItemList";
+import Search from "../Search";
+import ItemList from "../ItemList";
 import { useState, useEffect } from "react";
-import { getItems } from "../../api";
-import '../../css/HomePage.css'
+import { getItems } from "../../../api";
+import '../../../css/HomePage.css'
 function HomePage({setBasket}) {
   const [itemList, setItemList] = useState([]);
   const [searchQuery, setSearchQuery] = useState({
@@ -11,8 +11,6 @@ function HomePage({setBasket}) {
     category: "All",
   });
   const [searchItem, setSearchItem] = useState("")
-
-
   useEffect(() => {
     getItems(searchQuery).then((items) => {
       setItemList(items);
@@ -21,7 +19,7 @@ function HomePage({setBasket}) {
   return (
     <main>
       <Search setSearchQuery={setSearchQuery} setSearchItem = {setSearchItem} />
-      <ItemList setBasket={setBasket} itemList={itemList} searchItem = {searchItem}/>
+      <ItemList showButton = {true} setBasket={setBasket} itemList={itemList} searchItem = {searchItem}/>
     </main>
   );
 }

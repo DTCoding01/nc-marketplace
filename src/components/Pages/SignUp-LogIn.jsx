@@ -1,8 +1,7 @@
 import { useState } from "react";
-import "../../css/Signup.css";
-import SignUp from "./SignUp";
-import LogIn from "./LogIn";
-
+import "../../../css/Signup.css";
+import SignUp from "../SignUp";
+import LogIn from "../LogIn";
 
 export default function SignUpLogIn() {
   const [form, setForm] = useState("sign-up");
@@ -22,9 +21,9 @@ export default function SignUpLogIn() {
           </button>
         </li>
         <li>
-          <button  className="log-in" onClick={handleClick}>
+          <button className="log-in" onClick={handleClick}>
             Log-In
-          </button >
+          </button>
         </li>
       </ul>
       {form === "sign-up" ? <SignUp /> : <LogIn />}
