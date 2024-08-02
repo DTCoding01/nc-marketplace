@@ -6,7 +6,8 @@
   "homepage": "https://dtcoding01.github.io/nc-marketplace",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run postbuild",
+    "postbuild": "copyfiles ./dist/index.html ./dist/404.html",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -22,6 +23,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
