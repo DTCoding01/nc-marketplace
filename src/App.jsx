@@ -13,7 +13,7 @@ function App() {
     <>
       <Navbar basket={basket} />
       <Routes>
-        <Route path="/" element={<HomePage setBasket={setBasket} />}></Route>
+        <Route path="/nc-marketplace" element={<HomePage setBasket={setBasket} />}></Route>
         <Route path="/sell" element={<SellItem />}></Route>
         <Route path="/sign-up" element={<SignUpLogIn />}></Route>
         <Route path="/account" element={<AccountPage />}></Route>
