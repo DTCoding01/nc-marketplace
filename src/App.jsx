@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./components/Pages/HomePage";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
@@ -12,13 +12,15 @@ function App() {
   return (
     <>
       <Navbar basket={basket} />
-      <Routes>
-        <Route path="/nc-marketplace" element={<HomePage setBasket={setBasket} />}></Route>
-        <Route path="/sell" element={<SellItem />}></Route>
-        <Route path="/sign-up" element={<SignUpLogIn />}></Route>
-        <Route path="/account" element={<AccountPage />}></Route>
-        <Route path="/basket" element={<Basket basket={basket} setBasket={setBasket}/>}></Route>
-      </Routes>
+      <Router basename="/nc-marketplace">
+        <Routes>
+          <Route path="/" element={<HomePage setBasket={setBasket} />} />
+          <Route path="/sell" element={<SellItem />} />
+          <Route path="/sign-up" element={<SignUpLogIn />} />
+          <Route path="/account" element={<AccountPage />} />
+          <Route path="/basket" element={<Basket basket={basket} setBasket={setBasket} />} />
+        </Routes>
+      </Router>
     </>
   );
 }
