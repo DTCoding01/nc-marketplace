@@ -1,4 +1,13 @@
-function ItemCard({ itemName, imgUrl, price, handleClick, showButton}) {
+function ItemCard({
+  itemName,
+  imgUrl,
+  price,
+  item_id,
+  handleClick,
+  showButton,
+  showDelete,
+  handleRemove,
+}) {
   return (
     <section className="item-card">
       <img className="item-image" src={imgUrl}></img>
@@ -7,11 +16,20 @@ function ItemCard({ itemName, imgUrl, price, handleClick, showButton}) {
           <p>{itemName}</p>
           <p>£{(price / 100).toFixed(2)}</p>
         </div>
-        {showButton && <button className="add-to-cart-button"
-          onClick={handleClick}
-        >
-          Add to cart
-        </button>}
+        {showButton && (
+          <button className="add-to-cart-button" onClick={handleClick}>
+            Add to cart
+          </button>
+        )}
+        {showDelete && (
+          <button
+            id={item_id}
+            onClick={handleRemove}
+            className="delete-from-listings-button"
+          >
+            Remove
+          </button>
+        )}
       </div>
     </section>
   );

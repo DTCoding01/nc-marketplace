@@ -9,7 +9,7 @@
 }
 
 .sell-title {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .sell-item-container {
   width: 80%;
@@ -52,7 +52,6 @@
   color: white;
 }
 
-
 @media (max-width: 1200px) {
   .sell-item-container {
     flex-direction: column;
@@ -62,7 +61,6 @@
 
   .sell-item-form {
     width: 80%;
-    
   }
 }
 
@@ -75,6 +73,5 @@
 
   .sell-item-form {
     width: 80%;
-    
   }
 }

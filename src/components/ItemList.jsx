@@ -1,6 +1,13 @@
 import ItemCard from "./ItemCard";
 
-function ItemList({ itemList, searchItem = '', setBasket, showButton = false }) {
+function ItemList({
+  itemList,
+  searchItem = "",
+  setBasket,
+  showButton = false,
+  showDelete = false,
+  handleRemove,
+}) {
   function handleClick(item) {
     setBasket((currBasket) => {
       return [...currBasket, item];
@@ -17,11 +24,15 @@ function ItemList({ itemList, searchItem = '', setBasket, showButton = false }) 
         .map((item) => {
           return (
             <li key={item.item_id} className="list-item">
-              <ItemCard showButton={showButton}
+              <ItemCard
+                showButton={showButton}
                 itemName={item.item_name}
                 imgUrl={item.img_url}
                 price={item.price}
+                item_id={item.item_id}
                 handleClick={() => handleClick(item)}
+                showDelete={showDelete}
+                handleRemove={handleRemove}
               />
             </li>
           );

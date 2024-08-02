@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { UserContext } from "../context/User";
 function Navbar({ basket }) {
   const { user } = useContext(UserContext);
-  console.log(user)
+
   return (
     <header>
       <nav>

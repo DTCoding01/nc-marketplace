@@ -29,18 +29,18 @@ export function getUserByUsername(username) {
     return data.user;
   });
 }
-export function getOrdersByUsername(username){
-  return api.get(`/users/${username}/orders`).then(({data}) => {
-    return data.items
-  })
+export function getOrdersByUsername(username) {
+  return api.get(`/users/${username}/orders`).then(({ data }) => {
+    return data.items;
+  });
 }
 export function getUserIdByUsername(username) {
-  return api.get(`/users`).then(({data}) => {
+  return api.get(`/users`).then(({ data }) => {
     const user = data.users.filter((user) => {
-      return user.username === username
-    })
-    return user[0].user_id
-  })
+      return user.username === username;
+    });
+    return user[0].user_id;
+  });
 }
 export function postItem(item) {
   const { price } = item;
@@ -65,4 +65,15 @@ export function postUser(user) {
     .catch((err) => {
       console.log(err);
     });
+}
+
+export function getListingsByUserId(id) {
+  return api.get("/items").then(({ data: { items } }) => {
+    const filteredListings = items.filter((item) => item.listed_by === id);
+    return filteredListings
+  });
+}
+
+export function deleteListingByItemId(id) {
+  return api.delete(`/items/${id}`)
 }

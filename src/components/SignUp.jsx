@@ -26,7 +26,7 @@ export default function SignUp() {
       });
   }
   return (
-    <form onSubmit={handleSubmit} className="sign-up">
+    <form onSubmit={handleSubmit} className="sign-up-form">
       <label htmlFor="username">
         Username:
         <input onChange={handleChange} id="username"></input>

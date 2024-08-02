@@ -12,9 +12,9 @@ export default function SignUpLogIn() {
   }
 
   return (
-    <section className="sign-up">
-      <h1>NC Marketplace</h1>
-      <ul>
+    <section className="sign-up-page">
+      <h1 id="sign-up-header">NC Marketplace</h1>
+      <ul className="log-in-ul">
         <li>
           <button className="sign-up" onClick={handleClick}>
             Sign-Up

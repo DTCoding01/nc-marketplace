@@ -6,7 +6,7 @@ export default function OrdersPage() {
   const { user } = useContext(UserContext);
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    getOrdersByUsername(user).then((items) => {
+    getOrdersByUsername(user.username).then((items) => {
       setOrders(items);
     });
   }, []);
