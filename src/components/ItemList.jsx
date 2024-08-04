@@ -10,14 +10,13 @@ function ItemList({
   showDelete = false,
   handleRemove,
 }) {
-  const {user} = useContext(UserContext)
+  const { user } = useContext(UserContext);
   function handleClick(item) {
-    postToBasket(user.username, item.item_id)
-    .then((item) => {
+    postToBasket(user.username, item.item_id).then((item) => {
       setBasket((currBasket) => {
         return [...currBasket, item];
       });
-    })
+    });
   }
   return (
     <ol className="item-list">
@@ -27,9 +26,9 @@ function ItemList({
             .toLowerCase()
             .includes(searchItem.toLowerCase());
         })
-        .map((item) => {
+        .map((item, index) => {
           return (
-            <li key={item.item_id} className="list-item">
+            <li key={index} className="list-item">
               <ItemCard
                 showButton={showButton}
                 itemName={item.item_name}
